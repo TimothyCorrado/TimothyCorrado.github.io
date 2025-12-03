@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Timothy Corrado | Cybersecurity Analyst</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio of Timothy Corrado, Security+ certified Cybersecurity Analyst focused on SOC, blue team, and detection engineering." />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-alt: #020617;
+      --card: #111827;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.08);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at top, #1f2937 0, #020617 55%);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 15px; /* slightly larger for mobile readability */
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 1.75rem 1rem 3rem; /* slightly tighter for mobile */
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      margin-bottom: 2.25rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.4rem;
+    }
+
+    @media (min-width: 720px) {
+      header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    .hero-main {
+      max-width: 620px;
+    }
+
+    .name {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .title {
+      font-size: 0.98rem;
+      color: var(--muted);
+      margin-top: 0.2rem;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-radius: 999px;
+      padding: 0.25rem 0.75rem;
+      font-size: 0.8rem;
+      margin-top: 0.6rem;
+    }
+
+    .hero-badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #22c55e;
+    }
+
+    .hero-text {
+      margin-top: 0.8rem;
+      font-size: 0.94rem;
+      color: var(--muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.1rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.55rem 0.95rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      font-size: 0.9rem;
+      cursor: pointer;
+      background: transparent;
+      color: var(--text);
+      transition: background 0.15s, border-color 0.15s, transform 0.1s;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #020617;
+      border-color: var(--accent);
+      font-weight: 600;
+    }
+
+    .btn-primary:hover {
+      background: #0ea5e9;
+      border-color: #0ea5e9;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      border-color: var(--accent);
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    .btn span.icon {
+      font-size: 1.05rem;
+      margin-right: 0.35rem;
+    }
+
+    .hero-meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.7rem;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .section-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .section-card {
+      background: linear-gradient(135deg, #020617, #020617 55%, #0b1220);
+      border-radius: 0.9rem;
+      border: 1px solid var(--border);
+      padding: 1rem 1rem;
+    }
+
+    .about-text {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .about-text strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.9rem;
+    }
+
+    @media (min-width: 880px) {
+      .two-col {
+        grid-template-columns: 3fr 2fr;
+      }
+    }
+
+    .project-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .project {
+      padding: 0.8rem 0.85rem;
+      border-radius: 0.7rem;
+      border: 1px solid var(--border);
+      background: radial-gradient(circle at top left, #020617, #020617 60%, #020617 100%);
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.5rem;
+    }
+
+    .project-name {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .project-tag {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+    }
+
+    .project-body {
+      margin-top: 0.35rem;
+      font-size: 0.84rem;
+      color: var(--muted);
+    }
+
+    .project-body ul {
+      margin-top: 0.2rem;
+      padding-left: 1rem;
+    }
+
+    .project-body li {
+      margin-bottom: 0.08rem;
+    }
+
+    .project-links {
+      margin-top: 0.45rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .project-links a {
+      font-weight: 500;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      margin-top: 0.35rem;
+    }
+
+    .pill {
+      font-size: 0.75rem;
+      padding: 0.12rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: rgba(15, 23, 42, 0.8);
+    }
+
+    .pill-strong {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-soft);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.55rem;
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+
+    @media (min-width: 640px) {
+      .skills-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .skills-row span.label {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .meta-row {
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .meta-row strong {
+      color: var(--text);
+    }
+
+    footer {
+      margin-top: 2.2rem;
+      border-top: 1px solid var(--border);
+      padding-top: 1.1rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.7rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 0.7rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      font-size: 0.78rem;
+    }
+
+    /* MOBILE-SPECIFIC TWEAKS */
+    @media (max-width: 640px) {
+      .hero-actions {
+        flex-direction: column;
+      }
+      .btn,
+      .btn-primary {
+        width: 100%;
+      }
+      .page {
+        padding: 1.25rem 0.9rem 2.5rem;
+      }
+      .name {
+        font-size: 1.6rem;
+      }
+      .hero-text {
+        font-size: 0.93rem;
+      }
+      .section-card {
+        padding: 0.9rem 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="hero-main">
+        <div class="name">Timothy Corrado</div>
+        <div class="title">Cybersecurity Analyst &bull; SOC / Blue Team &bull; Security+ Certified</div>
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Open to SOC Analyst &amp; Cybersecurity Analyst roles
+        </div>
+        <p class="hero-text">
+          Security+ certified cyber professional with hands-on experience building a <strong>mini SOC lab</strong> using Windows logs,
+          Sysmon, and Wazuh, plus a custom <strong>Windows Event Monitor &amp; Analyzer</strong> for authentication analysis.
+          Former U.S. Marine with calm, reliable decision-making under pressure.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="YOUR_RESUME_URL_HERE" target="_blank" rel="noopener">
+            <span class="icon">⬇</span> Download Résumé (PDF)
+          </a>
+          <a class="btn" href="https://github.com/TimothyCorrado" target="_blank" rel="noopener">
+            <span class="icon">💻</span> View GitHub Portfolio
+          </a>
+          <a class="btn" href="https://www.linkedin.com/in/YOUR-LINKEDIN-HERE" target="_blank" rel="noopener">
+            <span class="icon">🔗</span> Connect on LinkedIn
+          </a>
+        </div>
+        <div class="hero-meta">
+          Omaha, NE &nbsp;&middot;&nbsp; Security+ &nbsp;&middot;&nbsp; Focused on SOC / detection engineering / blue team
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="two-col">
+        <div>
+          <div class="section-title">About</div>
+          <div class="section-card">
+            <p class="about-text">
+              I’m a <strong>Security+ certified Cybersecurity Analyst</strong> focused on blue team work, SOC operations, and detection
+              engineering. I’ve built and documented hands-on labs around <strong>Windows Security logs, Sysmon, Wazuh SIEM, and
+              Python/PowerShell log analysis</strong>.
+            </p>
+            <p class="about-text" style="margin-top: 0.55rem;">
+              My recent projects include a <strong>Mini SOC Detection Lab</strong> with custom rules for failed logons, brute-force behavior,
+              suspicious PowerShell, and privilege escalation, as well as a <strong>Windows Event Monitor &amp; Analyzer</strong> that
+              correlates Event ID 4624/4625 activity. As a former U.S. Marine, I bring strong situational awareness, discipline, and
+              reliable follow-through to every incident and alert queue.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="section-title">Snapshot</div>
+          <div class="section-card">
+            <div class="meta-row" style="margin-bottom: 0.35rem;">
+              <strong>Strengths:</strong> Windows logs, detection engineering, triage, documentation
+            </div>
+            <div class="meta-row">
+              <strong>Currently:</strong> Building projects, applying for SOC / Cybersecurity Analyst roles
+            </div>
+            <div class="pill-row" style="margin-top: 0.7rem;">
+              <div class="pill pill-strong">CompTIA Security+</div>
+              <div class="pill">Mini SOC Lab</div>
+              <div class="pill">Sysmon</div>
+              <div class="pill">Wazuh SIEM</div>
+              <div class="pill">Windows Event Logs</div>
+              <div class="pill">Python</div>
+              <div class="pill">PowerShell</div>
+              <div class="pill">MITRE ATT&amp;CK</div>
+              <div class="pill">Wireshark</div>
+              <div class="pill">Marine Corps Veteran</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-title">Featured Projects</div>
+        <div class="section-card">
+          <div class="project-list">
+
+            <!-- Project 1 -->
+            <article class="project">
+              <div class="project-header">
+                <div class="project-name">Mini SOC Detection Lab (Wazuh + Sysmon)</div>
+                <div class="project-tag">Blue Team &bull; SOC &bull; In Progress</div>
+              </div>
+              <div class="project-body">
+                <p>
+                  7-day lab simulating a small SOC: Windows endpoint &rarr; Sysmon &rarr; Wazuh SIEM. Focused on
+                  <strong>detection engineering, alert triage, and MITRE ATT&amp;CK mapping</strong>.
+                </p>
+                <ul>
+                  <li>Ingest Windows Security + Sysmon logs into Wazuh and validate end-to-end visibility.</li>
+                  <li>Create detection rules for failed logons, brute-force attempts, suspicious PowerShell, and privilege escalation.</li>
+                  <li>Trigger test attacks, triage resulting alerts, and document incidents with MITRE technique references.</li>
+                </ul>
+                <div class="project-links">
+                  GitHub: <a href="https://github.com/TimothyCorrado/mini-soc-detection-lab" target="_blank" rel="noopener">
+                    github.com/TimothyCorrado/mini-soc-detection-lab
+                  </a>
+                </div>
+                <div class="pill-row">
+                  <div class="pill">Wazuh</div>
+                  <div class="pill">Sysmon</div>
+                  <div class="pill">Windows 10</div>
+                  <div class="pill">VirtualBox</div>
+                  <div class="pill">MITRE ATT&amp;CK</div>
+                  <div class="pill">Detection Rules</div>
+                  <div class="pill">Alert Triage</div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="project">
+              <div class="project-header">
+                <div class="project-name">Windows Event Monitor &amp; Analyzer</div>
+                <div class="project-tag">Log Analysis &bull; Detection</div>
+              </div>
+              <div class="project-body">
+                <p>
+                  Custom Windows log analysis pipeline for <strong>Event ID 4624/4625 authentication events</strong>, combining PowerShell
+                  exports with Python parsing and an HTML report for SOC-style triage.
+                </p>
+                <ul>
+                  <li>Export Security logs with PowerShell and filter failed vs. successful logons by user and IP.</li>
+                  <li>Use Python to parse log data, summarize abnormal patterns, and highlight potential brute-force behavior.</li>
+                  <li>Generate an HTML dashboard showing login activity, timestamps, and high-risk accounts for analysts.</li>
+                </ul>
+                <div class="project-links">
+                  GitHub:
+                  <a href="https://github.com/TimothyCorrado/Windows-Event-Monitor-Analyzer" target="_blank" rel="noopener">
+                    github.com/TimothyCorrado/Windows-Event-Monitor-Analyzer
+                  </a>
+                </div>
+                <div class="pill-row">
+                  <div class="pill">Windows Event Logs</div>
+                  <div class="pill">Event ID 4624 / 4625</div>
+                  <div class="pill">Python</div>
+                  <div class="pill">PowerShell</div>
+                  <div class="pill">HTML Reports</div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="project">
+              <div class="project-header">
+                <div class="project-name">PowerShell Log Parser (Mini Project)</div>
+                <div class="project-tag">Automation &bull; Log Triage</div>
+              </div>
+              <div class="project-body">
+                <p>
+                  Lightweight PowerShell script that extracts failed logons (Event ID 4625), aggregates them by username and IP, and
+                  outputs CSV for quick SOC triage.
+                </p>
+                <ul>
+                  <li>Query Security logs for Event ID 4625 and filter by time window.</li>
+                  <li>Group failures by target user and source IP to reveal brute-force and password-spray patterns.</li>
+                  <li>Export results as CSV for analysts to pivot in Excel or SIEM tools, mapped to MITRE T1110 (Brute Force).</li>
+                </ul>
+                <div class="project-links">
+                  GitHub:
+                  <a href="https://github.com/TimothyCorrado" target="_blank" rel="noopener">
+                    github.com/TimothyCorrado
+                  </a>
+                  &nbsp;&middot; Mini project within Windows log tooling
+                </div>
+                <div class="pill-row">
+                  <div class="pill">PowerShell</div>
+                  <div class="pill">Event ID 4625</div>
+                  <div class="pill">CSV Export</div>
+                  <div class="pill">Brute Force (T1110)</div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-title">Skills & Tools</div>
+        <div class="section-card">
+          <div class="skills-grid">
+            <div class="skills-row">
+              <span class="label">Blue Team &amp; SOC:</span> Wazuh, SIEM workflows, alert triage, incident documentation
+            </div>
+            <div class="skills-row">
+              <span class="label">Logging &amp; Detection:</span> Windows Security logs, Sysmon, Event ID 4624/4625, basic detection rules
+            </div>
+            <div class="skills-row">
+              <span class="label">Scripting:</span> Python (log parsing), PowerShell (event queries), Bash basics
+            </div>
+            <div class="skills-row">
+              <span class="label">Networking:</span> TCP/IP, DNS, DHCP, ARP, basic routing concepts
+            </div>
+            <div class="skills-row">
+              <span class="label">Platforms:</span> Windows 10/11, Windows Server (lab), Kali Linux, VirtualBox
+            </div>
+            <div class="skills-row">
+              <span class="label">Frameworks:</span> MITRE ATT&amp;CK, basic incident response lifecycle
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-title">Background</div>
+        <div class="section-card">
+          <div class="meta-row" style="margin-bottom: 0.35rem;">
+            <strong>Education:</strong> B.S. Computer Science (in progress), A.S. Computer Science
+          </div>
+          <div class="meta-row" style="margin-bottom: 0.35rem;">
+            <strong>Certification:</strong> CompTIA Security+
+          </div>
+          <div class="meta-row">
+            <strong>Military:</strong> U.S. Marine Corps veteran &mdash; strong situational awareness and fast decision-making,
+            directly applicable to SOC alert handling and incident response.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>&copy; <span id="year"></span> Timothy Corrado &mdash; Cybersecurity Analyst</div>
+      <div class="footer-links">
+        <a href="mailto:YOUR_EMAIL_HERE">Email</a>
+        <a href="https://github.com/TimothyCorrado" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-HERE" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
