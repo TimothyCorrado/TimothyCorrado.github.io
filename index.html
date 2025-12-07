@@ -368,8 +368,8 @@
           Open to SOC Analyst &amp; Cybersecurity Analyst roles
         </div>
         <p class="hero-text">
-          Security+ certified cyber professional with hands-on experience building a <strong>mini SOC lab</strong> using Windows logs,
-          Sysmon, and Wazuh, plus a custom <strong>Windows Event Monitor &amp; Analyzer</strong> for authentication analysis.
+          Security+ certified cyber professional with hands-on experience building a <strong>mini SOC detection lab</strong> using Windows logs,
+          Sysmon, and Splunk, plus a custom <strong>Windows Event Monitor &amp; Analyzer</strong> for authentication analysis.
           Former U.S. Marine with calm, reliable decision-making under pressure.
         </p>
         <div class="hero-actions">
@@ -396,12 +396,12 @@
           <div class="section-card">
             <p class="about-text">
               I’m a <strong>Security+ certified Cybersecurity Analyst</strong> focused on blue team work, SOC operations, and detection
-              engineering. I’ve built and documented hands-on labs around <strong>Windows Security logs, Sysmon, Wazuh SIEM, and
+              engineering. I’ve built and documented hands-on labs around <strong>Windows Security logs, Sysmon, Splunk SIEM, Wazuh, and
               Python/PowerShell log analysis</strong>.
             </p>
             <p class="about-text" style="margin-top: 0.55rem;">
-              My recent projects include a <strong>Mini SOC Detection Lab</strong> with custom rules for failed logons, brute-force behavior,
-              suspicious PowerShell, and privilege escalation, as well as a <strong>Windows Event Monitor &amp; Analyzer</strong> that
+              My recent projects include a <strong>Mini SOC Detection Lab</strong> with end-to-end log engineering, Splunk-based detections,
+              alert triage, and a SOC-style investigation report, as well as a <strong>Windows Event Monitor &amp; Analyzer</strong> that
               correlates Event ID 4624/4625 activity. As a former U.S. Marine, I bring strong situational awareness, discipline, and
               reliable follow-through to every incident and alert queue.
             </p>
@@ -419,8 +419,9 @@
             <div class="pill-row" style="margin-top: 0.7rem;">
               <div class="pill pill-strong">CompTIA Security+</div>
               <div class="pill">Mini SOC Lab</div>
+              <div class="pill">Splunk</div>
               <div class="pill">Sysmon</div>
-              <div class="pill">Wazuh SIEM</div>
+              <div class="pill">Wazuh</div>
               <div class="pill">Windows Event Logs</div>
               <div class="pill">Python</div>
               <div class="pill">PowerShell</div>
@@ -440,18 +441,18 @@
             <!-- Project 1 -->
             <article class="project">
               <div class="project-header">
-                <div class="project-name">Mini SOC Detection Lab (Wazuh + Sysmon)</div>
-                <div class="project-tag">Blue Team &bull; SOC &bull; In Progress</div>
+                <div class="project-name">Mini SOC Detection Lab (Splunk + Sysmon)</div>
+                <div class="project-tag">Blue Team &bull; SOC &bull; Completed</div>
               </div>
               <div class="project-body">
                 <p>
-                  7-day lab simulating a small SOC: Windows endpoint &rarr; Sysmon &rarr; Wazuh SIEM. Focused on
-                  <strong>detection engineering, alert triage, and MITRE ATT&amp;CK mapping</strong>.
+                  7-day lab simulating a small SOC: Windows endpoint &rarr; Sysmon &rarr; Splunk SIEM. Focused on
+                  <strong>log engineering, detection development, alert triage, and a final SOC investigation report</strong>.
                 </p>
                 <ul>
-                  <li>Ingest Windows Security + Sysmon logs into Wazuh and validate end-to-end visibility.</li>
-                  <li>Create detection rules for failed logons, brute-force attempts, suspicious PowerShell, and privilege escalation.</li>
-                  <li>Trigger test attacks, triage resulting alerts, and document incidents with MITRE technique references.</li>
+                  <li>Onboarded Windows Security + Sysmon logs into Splunk and validated sourcetypes, indexing, and event coverage.</li>
+                  <li>Built SPL detections for failed logons, success-after-failure correlation, and suspicious process activity mapped to MITRE T1110.</li>
+                  <li>Triggered test authentication activity, triaged alerts in Splunk, and delivered a structured SOC report with findings and recommendations.</li>
                 </ul>
                 <div class="project-links">
                   GitHub: <a href="https://github.com/TimothyCorrado/mini-soc-detection-lab" target="_blank" rel="noopener">
@@ -459,13 +460,14 @@
                   </a>
                 </div>
                 <div class="pill-row">
-                  <div class="pill">Wazuh</div>
+                  <div class="pill">Splunk</div>
                   <div class="pill">Sysmon</div>
                   <div class="pill">Windows 10</div>
                   <div class="pill">VirtualBox</div>
                   <div class="pill">MITRE ATT&amp;CK</div>
                   <div class="pill">Detection Rules</div>
                   <div class="pill">Alert Triage</div>
+                  <div class="pill">SOC Reporting</div>
                 </div>
               </div>
             </article>
@@ -543,7 +545,7 @@
         <div class="section-card">
           <div class="skills-grid">
             <div class="skills-row">
-              <span class="label">Blue Team &amp; SOC:</span> Wazuh, SIEM workflows, alert triage, incident documentation
+              <span class="label">Blue Team &amp; SOC:</span> Splunk SIEM, Wazuh, SIEM workflows, alert triage, incident documentation
             </div>
             <div class="skills-row">
               <span class="label">Logging &amp; Detection:</span> Windows Security logs, Sysmon, Event ID 4624/4625, basic detection rules
